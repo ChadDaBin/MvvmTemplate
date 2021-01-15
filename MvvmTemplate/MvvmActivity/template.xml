@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="5"
+    name="Mvvm Activity"
+    minApi="9"
+    minBuildApi="14"
+    description="Quickly generate MVVM templates ">
+
+    <category value="Activity" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="ActivityClass"
+        name="Activity Name"
+        type="string"
+        constraints="nonempty"
+        default="name(correct eg:Player; not recommended eg:PlayerActivity)" />
+
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_blank.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>

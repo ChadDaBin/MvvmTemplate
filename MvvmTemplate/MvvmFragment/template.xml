@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="5"
+    name="Mvvm Fragment"
+    minApi="9"
+    minBuildApi="14"
+    description="Quickly generate MVVM templates ">
+
+    <category value="Fragment" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="FragmentClass"
+        name="Fragment Name"
+        type="string"
+        constraints="nonempty"
+        default="name(correct eg:Player; not recommended eg:PlayerFragment)" />
+
+
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_blank.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
