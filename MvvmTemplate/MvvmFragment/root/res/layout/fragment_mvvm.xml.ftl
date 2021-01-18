@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     
     <data>
-        <import type="${packageName}.mvvm.viewmodel.${ViewModelName}"/>
         <variable
             name="viewModel"
-            type="${ViewModelName}"/>
+            type="${packageName}.mvvm.viewmodel.${ViewModelName}"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -12,13 +12,13 @@ import ${packageName}.mvvm.viewmodel.${ViewModelName};
 public class ${ActivityName} extends BaseActivity<${ViewModelName}, ${ViewDataBindingName}>{
 
     @Override
-    protected ${ViewModelName} createViewModel() {
-        return new ViewModelProvider(this).get(${ViewModelName}.class);
+    protected int getLayoutId() {
+        return R.layout.activity_${layoutName};
     }
 
     @Override
-    protected int getLayoutId() {
-        return R.layout.activity_${layoutName};
+    protected ${ViewModelName} createViewModel() {
+        return new ViewModelProvider(this).get(${ViewModelName}.class);
     }
 
     @Override
@@ -27,13 +27,18 @@ public class ${ActivityName} extends BaseActivity<${ViewModelName}, ${ViewDataBi
     }
 
     @Override
-    protected void initData(@Nullable Bundle savedInstanceState) {
-       
+    protected void initXmlVariable() {
+      
     }
 
     @Override
     protected void initViewObservable() {
 
+    }
+
+    @Override
+    protected void initData(@Nullable Bundle savedInstanceState) {
+       
     }
 
 }

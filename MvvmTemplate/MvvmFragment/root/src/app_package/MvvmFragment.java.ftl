@@ -11,13 +11,13 @@ import ${packageName}.mvvm.viewmodel.${ViewModelName};
 public class ${FragmentName} extends BaseFragment<${ViewModelName}, ${ViewDataBindingName}>  {
 
     @Override
-    protected ${ViewModelName} createViewModel() {
-        return  new ViewModelProvider(requireActivity()).get(${ViewModelName}.class);
+    protected int getLayoutId() {
+        return R.layout.fragment_${layoutName};
     }
 
     @Override
-    protected int getLayoutId() {
-        return R.layout.fragment_${layoutName};
+    protected ${ViewModelName} createViewModel() {
+        return  new ViewModelProvider(requireActivity()).get(${ViewModelName}.class);
     }
 
     @Override
@@ -26,12 +26,17 @@ public class ${FragmentName} extends BaseFragment<${ViewModelName}, ${ViewDataBi
     }
 
     @Override
-    protected void initData(@Nullable Bundle savedInstanceState) {
+    protected void initXmlVariable() {
 
     }
 
     @Override
     protected void initViewObservable() {
+
+    }
+
+    @Override
+    protected void initData(@Nullable Bundle savedInstanceState) {
 
     }
 
